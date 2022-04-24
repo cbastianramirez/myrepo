@@ -145,11 +145,34 @@ def sum(a, b):
 
 sum(int(input("1 numero: ")), int(input("2 numero: ")))
 
-"""
+
 nombre = "sebas"
 edad = 35
 ciudad = "Bello"
 print("Hola mi nombre es {}, tengo {} años y vivo en la ciudad de {}".format(nombre, edad, ciudad))
 
-hhh4
+
+#----------------------------------------
+a = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+
+import collections
+print([item for item, count in collections.Counter(a).items() if count > 1])
+
+#------------------------------------------
+
+mmy_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+new_list = []
+
+
+for i in my_list:
+    if my_list[i] not in new_list:
+        new_list.append(my_list[i])
+my_list = new_list[:]
+print("The list with unique elements only:")
+print(my_list)
+
+"""
+test = [[["hola" for r in range(3) ]for t in range(2) ]for u in range(3)]
+print(test)
+
 
