@@ -171,8 +171,20 @@ my_list = new_list[:]
 print("The list with unique elements only:")
 print(my_list)
 
+------------------------------Eval
+a = eval("2+3")
+print(a)
 """
-test = [[["hola" for r in range(3) ]for t in range(2) ]for u in range(3)]
-print(test)
+#___________________________ test class
+class persona:
+    def __init__(self, name, lastName, year):
+        self.name = name
+        self.lastName = lastName
+        self.year = year
+    
+persona1 = persona((input("Nombre: ")),(input("Apellido: ")),(int(input("Año nacimiento: "))))
+calcAge = 2022 - persona1.year
+print("Hola soy {} {} y tengo {} años.".format(persona1.name, persona1.lastName, calcAge))
+
 
 
