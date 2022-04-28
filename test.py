@@ -174,7 +174,7 @@ print(my_list)
 ------------------------------Eval
 a = eval("2+3")
 print(a)
-"""
+
 #___________________________ test class
 class persona:
     def __init__(self, name, lastName, year):
@@ -182,9 +182,26 @@ class persona:
         self.lastName = lastName
         self.year = year
     
+    def mostrar(self):
+        print("Hola soy {} {} y tengo {} años.".format(self.name, self.lastName, (2022-self.year)))
+
 persona1 = persona((input("Nombre: ")),(input("Apellido: ")),(int(input("Año nacimiento: "))))
-calcAge = 2022 - persona1.year
-print("Hola soy {} {} y tengo {} años.".format(persona1.name, persona1.lastName, calcAge))
+persona1.mostrar()
+"""
+class calcular:
+    def __init__(self, inversion, meses):
+        self.inversion = inversion
+        self.meses = meses
+        
+    def calculoInteres(self):
+        total = self.inversion + (self.inversion * (((15/100)/12)*self.meses))
+        print(total)
+
+resultado = calcular(int(input("Cuanto va a invertir? ")), int(input("A cuanto tiempo? ")))
+resultado.calculoInteres()
+
+
+
 
 
 
