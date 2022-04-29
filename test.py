@@ -187,7 +187,8 @@ class persona:
 
 persona1 = persona((input("Nombre: ")),(input("Apellido: ")),(int(input("Año nacimiento: "))))
 persona1.mostrar()
-"""
+
+#______________calculo interes invserion
 class calcular:
     def __init__(self, inversion, meses):
         self.inversion = inversion
@@ -201,7 +202,83 @@ resultado = calcular(int(input("Cuanto va a invertir? ")), int(input("A cuanto t
 resultado.calculoInteres()
 
 
+#_______________descuento compra por color bolita
+import random
+
+bolitas = ["blanca", "amarilla", "azul", "roja", "verde"]
+bolita = random.choice(bolitas)
+print("Sacaste bolita color: {}".format(bolita))
+valorCompra = (int(input("Valor de compra: ")))
+
+if bolita == "blanca":
+    aPagar = valorCompra-(valorCompra*1)
+elif bolita == "amarilla":
+    aPagar = valorCompra-(valorCompra*0.9)
+elif bolita == "amarilla":
+    aPagar = valorCompra-(valorCompra*0.75)
+elif bolita == "azul":
+    aPagar = valorCompra-(valorCompra*0.5)
+elif bolita == "roja":
+    aPagar = valorCompra-(valorCompra*0)
+
+print("Total a pagar: $", aPagar)
 
 
 
+#_______________GUI tkinter
+import tkinter
+import _tkinter
 
+HEIGHT = 700
+WIDTH = 800
+
+root = tkinter.Tk()
+
+canvas = tkinter.Canvas(root, height = HEIGHT, width=WIDTH)
+canvas.pack()
+
+frame = tkinter.Frame(root, bg='red')
+frame.pack()
+
+root.mainloop()
+"""
+import random
+from re import X 
+class guessNumber:
+    def __init__(self, b, n):
+        self.b = b
+        self.n = n
+    
+    def guess(self):
+        attempts = 0
+        #print(self.b)
+        while self.n != self.b:
+            if self.n <= 0 or self.n > 100:
+                print("¡Te saliste del intervalo!")
+            elif self.n > self.b:
+                print("¡Ups! Te pasaste")
+                attempts += 1
+            elif self.n < self.b:
+                print("¡Ups! Estás por debajo!")
+                attempts += 1
+            self.n = int(input("Ingrese un número: "))
+        print(f"¡LO LOGRASTE! Usaste {attempts+1} intentos")
+
+play = guessNumber((random.randint(0,100)),(int(input("Ingrese un número: "))))
+play.guess()
+
+"""
+#______suma numeros
+z=0
+for x in range(1,6):
+    z += x
+print(z)
+
+x=0
+z=0
+while x < 3:
+    x=x+1
+    z += x
+    print(z)
+
+"""
